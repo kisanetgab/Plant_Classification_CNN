@@ -13,25 +13,25 @@ Prerequisites
 - Python 3.8+ (recommended)
 - Recommended: a CUDA-enabled GPU with recent NVIDIA drivers for training. CPU training will work but is much slower.
 - Packages used (the notebook cells also show the exact imports):
-  - numpy
-  - pandas
-  - matplotlib
-  - seaborn
-  - scikit-learn
-  - tensorflow (or tensorflow-gpu) / keras
-  - opencv-python (cv2) or PIL (Pillow)
-  - kaggle
-  - tqdm
+  - `numpy`
+  - `pandas`
+  - `matplotlib`
+  - `seaborn`
+  - `scikit-learn`
+  - `tensorflow` (or `tensorflow-gpu`) / `keras`
+  - `opencv-python` (cv2) or `PIL` (Pillow)
+  - `kaggle`
+  - `tqdm`
 
 Quick setup (pip)
 1. Create and activate a virtual environment:
-   - python -m venv venv
-   - On macOS/Linux: source venv/bin/activate
-   - On Windows: venv\Scripts\activate
+   - `python -m venv venv`
+   - On macOS/Linux: `source venv/bin/activate`
+   - On Windows: `venv\Scripts\activate`
 
 2. Install packages:
-   - pip install --upgrade pip
-   - pip install numpy pandas matplotlib seaborn scikit-learn tensorflow opencv-python pillow kaggle tqdm jupyter
+   - `pip install --upgrade pip`
+   - `pip install numpy pandas matplotlib seaborn scikit-learn tensorflow opencv-python pillow kaggle tqdm jupyter`
 
 (Optionally create a requirements.txt from the above list to pin versions.)
 
@@ -40,14 +40,14 @@ Quick setup (pip)
 The notebook uses the Kaggle API to download the dataset. Steps to set up Kaggle access:
 
 1. Get your Kaggle API token:
-   - Go to https://www.kaggle.com/, sign in, then Account -> Create New API Token. This downloads a kaggle.json file.
+   - Go to [Kaggle](https://www.kaggle.com/), sign in, then Account -> Create New API Token. This downloads a kaggle.json file.
 
 2. Place your kaggle.json in a secure location:
-   - Recommended: move the file to ~/.kaggle/kaggle.json (Linux/Mac) or C:\Users\<username>\.kaggle\kaggle.json (Windows).
-   - Or set the environment variable KAGGLE_CONFIG_DIR to the directory containing kaggle.json.
+   - Recommended: move the file to `~/.kaggle/kaggle.json` (Linux/Mac) or `C:\Users\<username>\.kaggle\kaggle.json (Windows)`.
+   - Or set the environment variable `KAGGLE_CONFIG_DIR` to the directory containing kaggle.json.
 
 3. Example command to download a dataset (replace <owner>/<dataset> with the dataset slug used in the notebook):
-   - kaggle datasets download -d <owner>/<dataset> -p data/ --unzip
+   - `kaggle datasets download -d <owner>/<dataset> -p data/ --unzip`
 
 If you prefer, you can run the dataset download cells inside PlantClassification.ipynb (these cells use the Kaggle API). If the repository's kaggle.json is present, replace it with your own token before use.
 
@@ -55,7 +55,7 @@ How to reproduce results (recommended)
 1. Open the notebook
    - Run Jupyter locally:
      - jupyter notebook PlantClassification.ipynb
-   - Or open in Google Colab: upload your kaggle.json (or set Kaggle token in Colab) and run the cells.
+   - Or open in Google Colab: upload your `kaggle.json` (or set Kaggle token in Colab) and run the cells.
 
 2. Configure runtime
    - If training, select a GPU runtime (Colab) or ensure TensorFlow detects your GPU locally.
