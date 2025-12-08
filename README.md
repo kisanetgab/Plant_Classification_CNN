@@ -54,7 +54,7 @@ If you prefer, you can run the dataset download cells inside PlantClassification
 How to reproduce results (recommended)
 1. Open the notebook
    - Run Jupyter locally:
-     - jupyter notebook PlantClassification.ipynb
+     - `jupyter notebook PlantClassification.ipynb`
    - Or open in Google Colab: upload your `kaggle.json` (or set Kaggle token in Colab) and run the cells.
 
 2. Configure runtime
@@ -69,7 +69,7 @@ How to reproduce results (recommended)
    - Evaluation and visualization cells (confusion matrix, sample predictions, metrics).
 
 4. Execute the entire notebook programmatically (optional)
-   - jupyter nbconvert --to notebook --execute PlantClassification.ipynb --ExecutePreprocessor.timeout=0 --output executed.ipynb
+   - `jupyter nbconvert --to notebook --execute PlantClassification.ipynb --ExecutePreprocessor.timeout=0 --output executed.ipynb`
    - Increase timeout if training takes long, or run interactive in Jupyter/Colab.
 
 What the notebook produces (expected outputs)
@@ -80,14 +80,14 @@ What the notebook produces (expected outputs)
 
 Reproducibility tips
 - Use the same package versions (TensorFlow, Keras) if you need bit-for-bit reproducibility.
-- Fix seeds (numpy.random.seed, random.seed, tensorflow.random.set_seed).
+- Fix seeds (`numpy.random.seed`, `random.seed`, `tensorflow.random.set_seed`).
 - Ensure consistent image preprocessing (resize, normalization).
 - Record hardware used (GPU model) and batch size / learning rate.
 
 Common issues and troubleshooting
 - Kaggle credentials errors:
-  - Ensure kaggle.json is valid and located at ~/.kaggle/kaggle.json or KAGGLE_CONFIG_DIR is set.
-  - File permissions: chmod 600 ~/.kaggle/kaggle.json (Linux/Mac).
+  - Ensure `kaggle.json` is valid and located at `~/.kaggle/kaggle.json` or `KAGGLE_CONFIG_DIR` is set.
+  - File permissions: `chmod 600 ~/.kaggle/kaggle.json` (Linux/Mac).
 - Out-of-memory (OOM) on GPU:
   - Reduce batch size, reduce image resolution, or use a smaller model.
 - Slow training on CPU:
@@ -102,6 +102,3 @@ Suggested next steps
 - Transfer learning: experiment with pretrained backbones (MobileNet, EfficientNet, ResNet).
 - Cross-validation: implement k-fold cross-validation for more robust evaluation.
 - Export model for inference: save model in SavedModel format and create a small inference script.
-
-Contact / Questions
-If you have questions about reproducing the notebook or want help adapting it to a different dataset or environment, open an issue or contact the repository owner.
