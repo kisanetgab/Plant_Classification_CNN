@@ -35,7 +35,8 @@ Quick setup (pip)
 
 (Optionally create a requirements.txt from the above list to pin versions.)
 
-Kaggle dataset download
+## Kaggle dataset download
+
 The notebook uses the Kaggle API to download the dataset. Steps to set up Kaggle access:
 
 1. Get your Kaggle API token:
