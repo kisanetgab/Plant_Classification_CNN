@@ -40,7 +40,7 @@ Quick setup (pip)
 The notebook uses the Kaggle API to download the dataset. Steps to set up Kaggle access:
 
 1. Get your Kaggle API token:
-   - Go to [Kaggle](https://www.kaggle.com/), sign in, then Account -> Create New API Token. This downloads a kaggle.json file.
+   - Go to [Kaggle](https://www.kaggle.com/), sign in, then Account -> Create New API Token. This downloads a `kaggle.json` file.
 
 2. Place your kaggle.json in a secure location:
    - Recommended: move the file to `~/.kaggle/kaggle.json` (Linux/Mac) or `C:\Users\<username>\.kaggle\kaggle.json (Windows)`.
